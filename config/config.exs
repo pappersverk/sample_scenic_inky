@@ -75,7 +75,8 @@ config :sample_scenic_inky, :viewport, %{
   opts: [scale: 1.0],
   drivers: [
     %{
-      module: ScenicDriverInky
+      module: ScenicDriverInky,
+      opts: [dithering: :halftone]
     }
   ]
 }
