@@ -76,7 +76,11 @@ config :sample_scenic_inky, :viewport, %{
   drivers: [
     %{
       module: ScenicDriverInky,
-      opts: [dithering: :halftone]
+      opts: [
+        type: :phat,
+        accent: :red,
+        dithering: :halftone
+      ]
     }
   ]
 }
