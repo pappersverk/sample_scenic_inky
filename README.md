@@ -1,27 +1,27 @@
 # SampleScenicInky
 
-**TODO: Add description**
+A sample application for using the Scenic Driver for the Inky eInk display. It uses the Elixir-library Inky and a custom driver heavily based off of the the nerves-training oled bonnet driver.
 
-## Targets
+Scenic is the easiest way to render text and basic primitives to the display that we've tried so far.
 
-Nerves applications produce images for hardware targets based on the
-`MIX_TARGET` environment variable. If `MIX_TARGET` is unset, `mix` builds an
-image that runs on the host (e.g., your laptop). This is useful for executing
-logic tests, running utilities, and debugging. Other targets are represented by
-a short name like `rpi3` that maps to a Nerves system image for that platform.
-All of this logic is in the generated `mix.exs` and may be customized. For more
-information about targets see:
+## Getting it running on the host
 
-https://hexdocs.pm/nerves/targets.html#content
+You have to run this with no-halt in dev or it will just blink past and close down.
 
-## Getting Started
+```
+mix deps.get
+mix run --no-halt
+```
+
+## Getting it onto hardware
 
 To start your Nerves app:
   * `export MIX_TARGET=my_target` or prefix every command with
-    `MIX_TARGET=my_target`. For example, `MIX_TARGET=rpi3`
+    `MIX_TARGET=my_target`. For example, `MIX_TARGET=rpi0`
   * Install dependencies with `mix deps.get`
   * Create firmware with `mix firmware`
   * Burn to an SD card with `mix firmware.burn`
+  * Any subsequent updates can use `mix firmware.gen.script` and `./upload.sh`
 
 ## Learn more
 

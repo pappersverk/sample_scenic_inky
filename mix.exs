@@ -46,8 +46,7 @@ defmodule SampleScenicInky.MixProject do
       {:nerves_init_gadget, "~> 0.4", targets: @all_targets},
 
       # Dependencies for specific targets
-      {:scenic_driver_inky, github: "lawik/scenic_driver_inky", targets: :rpi0},
-      #{:scenic_driver_inky, path: "../scenic_driver_inky", targets: :rpi0},
+      {:scenic_driver_inky, github: "pappersverk/scenic_driver_inky", targets: :rpi0},
       {:scenic_driver_glfw, "~> 0.10", targets: :host},
       {:nerves_system_rpi, "~> 1.6", runtime: false, targets: :rpi},
       {:nerves_system_rpi0, "~> 1.6", runtime: false, targets: :rpi0},
