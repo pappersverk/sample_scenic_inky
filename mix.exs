@@ -6,7 +6,7 @@ defmodule SampleScenicInky.MixProject do
   def project do
     [
       app: :sample_scenic_inky,
-      version: "0.1.0",
+      version: "1.0.0",
       elixir: "~> 1.8",
       archives: [nerves_bootstrap: "~> 1.5"],
       start_permanent: Mix.env() == :prod,
@@ -46,7 +46,7 @@ defmodule SampleScenicInky.MixProject do
       {:nerves_init_gadget, "~> 0.4", targets: @all_targets},
 
       # Dependencies for specific targets
-      {:scenic_driver_inky, github: "pappersverk/scenic_driver_inky", targets: :rpi0},
+      {:scenic_driver_inky, "~> 1.0.0", targets: :rpi0},
       {:scenic_driver_glfw, "~> 0.10", targets: :host},
       {:nerves_system_rpi, "~> 1.6", runtime: false, targets: :rpi},
       {:nerves_system_rpi0, "~> 1.6", runtime: false, targets: :rpi0},
